@@ -1,8 +1,13 @@
+@font-face {
+  font-family: Neue Hass;
+  src: url(fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Neue Hass;
 }
 
 body {
@@ -15,10 +20,11 @@ body {
   height: 100vh;
   width: 100%;
   background-color: #efeae3;
+  padding: 0 2vw;
 }
 
 nav {
-  padding: 2vw 2vw;
+  padding: 2vw 0vw;
   width: 100%;
   display: flex;
   align-items: center;
@@ -37,7 +43,6 @@ nav {
   border-radius: 50px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.9);
-  /* font-size: 18px; */
   position: relative;
   overflow: hidden;
 }
@@ -69,4 +74,27 @@ nav {
 
 #nav-tabs h4:hover a{
     color: white;
+}
+
+#center{
+  height: 65vh;
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0, 0.15);
+  padding-bottom: 2.5vw;
+}
+
+#left h3{
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+}
+
+#right h1{
+  font-size: 10vw;
+  text-align: right;
+  line-height: 8vw;
 }
