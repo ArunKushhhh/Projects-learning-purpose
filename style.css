@@ -17,10 +17,11 @@ body {
 
 #page1 {
   /* height: 100%; we do not use this as when we use %, it takes that much percent of it's parent as that property. Here, 100% of 0 (height of mmain div) is also 0, so insead use vh */
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
   padding: 0 2vw;
+  position: relative;
 }
 
 nav {
@@ -39,7 +40,7 @@ nav {
 
 #nav-tabs h4 {
   padding: 12px 21px;
-  border: 1px solid rgba(0,0,0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 50px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.9);
@@ -48,53 +49,115 @@ nav {
 }
 
 #nav-tabs h4::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    left: 0;
-    bottom: -100%;
-    border-radius: 50%;
-    transition: all ease 0.3s;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.3s;
 }
 
 #nav-tabs h4:hover::after {
-    bottom: 0;
-    border-radius: 0;
+  bottom: 0;
+  border-radius: 0;
 }
 
-#nav-tabs h4 a{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.9);
-    z-index: 9;
-    position: relative;
-    transition: all;
+#nav-tabs h4 a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  z-index: 9;
+  position: relative;
+  transition: all;
 }
 
-#nav-tabs h4:hover a{
-    color: white;
+#nav-tabs h4:hover a {
+  color: white;
 }
 
-#center{
+#center {
   height: 65vh;
   width: 100%;
-  /* background-color: orange; */
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0,0,0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 2.5vw;
 }
 
-#left h3{
+#left h3 {
   width: 25vw;
   font-size: 1.8vw;
   line-height: 2vw;
 }
 
-#right h1{
+#right h1 {
   font-size: 10vw;
   text-align: right;
   line-height: 8vw;
+}
+
+#page1 video {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 4vw;
+  position: relative;
+}
+
+#hero-shape {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0;
+  top: 68vh;
+  /* filter: blur(20px); */
+}
+
+#hero1 {
+  height: 100%;
+  width: 100%;
+  background: #fe320a;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 25%;
+  filter: blur(30px);
+  position: absolute;
+}
+#hero2 {
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#fe310a, #fe570a);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation: anime2 5s ease-in-out alternate infinite;
+}
+#hero3 {
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#fe310a, #fe570a);
+  border-radius: 50%;
+  filter: blur(30px);
+  position: absolute;
+  animation: anime1 3s ease-in-out alternate infinite;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(55%, -3%);
+  }
+  to {
+    transform: translate(0%, 10%);
+  }
+}
+
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+  to {
+    transform: translate(-15%, 30%);
+  }
 }
