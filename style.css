@@ -2,6 +2,10 @@
   font-family: Neue Hass;
   src: url(fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf);
 }
+@font-face {
+  font-family: Neue Hass light;
+  src: url(fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayLight.ttf);
+}
 
 * {
   padding: 0;
@@ -111,7 +115,7 @@ nav {
   width: 46vw;
   height: 36vw;
   right: 0;
-  top: 68vh;
+  top: 70vh;
   /* filter: blur(20px); */
 }
 
@@ -160,4 +164,114 @@ nav {
   to {
     transform: translate(-15%, 30%);
   }
+}
+
+#page2{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 8vw 0;
+  position: relative;
+}
+
+#moving-text {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar{
+  display: none;
+}
+
+.con {
+  white-space: nowrap;
+  display: inline-block;
+  animation: move 10s linear infinite;
+}
+
+#moving-text .con h1{
+  font-size: 9vw;
+  display: inline-block;
+}
+
+.circle {
+  height: 5vw;
+  width: 5vw;
+  background-color: #fe310a;
+  margin: 1vw 2vw;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@keyframes move {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+#page2-bottom {
+  min-height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  padding: 4vw 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+#page2-bottom h1 {
+  font-size: 3.5vw;
+  font-weight: bolder;
+  width: 50%;
+  margin-left: 4vw;
+  line-height: 4.5vw;
+}
+
+#bottom-part2 {
+  align-self: flex-end;
+  width: 20%;
+  margin-right: 6vw;
+}
+
+#bottom-part2 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#bottom-part2 p {
+  margin-top: 3vw;
+  font-family: Neue Hass light;
+  font-weight: 300;
+}
+
+#page2 #gui {
+  height: 32vw;
+  width: 32vw;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #fe310a, #fe5b0a);
+  filter: blur(25px);
+  animation: gui 6s ease-in-out infinite alternate;
+}
+
+@keyframes gui {
+  from {
+    transform: translate(10%, -10%) skew(0);
+  }
+  to {
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+#page3{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
 }
