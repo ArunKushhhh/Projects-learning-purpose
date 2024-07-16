@@ -20,3 +20,30 @@ elems.forEach(function (e) {
     fixedImage.style.backgroundImage = `url(${imageSrc})`;
   });
 });
+
+const design = document.querySelector("#heading h1:first-child")
+const project = document.querySelector("#heading h1:nth-child(2)")
+const execution = document.querySelector("#heading h1:nth-child(3)")
+const designContent = document.querySelector(".design-content")
+const projectContent = document.querySelector(".project-content")
+const executionContent = document.querySelector(".execution-content")
+const bar = document.querySelector("#orange-head-bar")
+
+design.addEventListener("click", () => {
+  bar.style.top = "0"
+  designContent.style.display = "block"
+  projectContent.style.display = "none"
+  executionContent.style.display = "none"
+})
+project.addEventListener("click", () => {
+  bar.style.top = "85px"
+  projectContent.style.display = "block"
+  designContent.style.display = "none"
+  executionContent.style.display = "none"
+})
+execution.addEventListener("click", () => {
+  bar.style.top = "160px"
+  executionContent.style.display = "block"
+  designContent.style.display = "none"
+  projectContent.style.display = "none"
+})

@@ -348,7 +348,7 @@ nav {
 }
 
 #btn {
-  margin: 2vw 2vw;
+  margin: 4vw 2vw;
   font-family: Neue Hass light;
   padding: 12px 24px;
   background: transparent;
@@ -387,3 +387,103 @@ nav {
   transition: all 0.3s;
 }
 
+#page4 {
+  min-height: 100vh;
+  background-color: #efeae3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vw;
+}
+
+#floating-window {
+  min-height: 100vh;
+  width: 95%;
+  background-color: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+#window-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 4vw;
+}
+
+#head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#head-bar{
+  position: relative;
+}
+
+#bar {
+  height: 16vw;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-right: 1.5vw;
+  position: relative;
+}
+
+#orange-head-bar {
+  height: 85px;
+  width: 2px;
+  background-color: #fe310a;
+  position: absolute;
+  top: 0;
+  transition: all 0.4s;
+}
+
+#head {
+  width: 100%;
+  height: 100%;
+  font-size: 2.5vw;
+  line-height: 5vw;
+}
+
+#heading h1:first-child{
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#heading h1:nth-child(2), #heading h1:nth-child(3){
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+#content{
+  color: white;
+  width: 370px;
+  margin-top: 3vw;
+}
+
+.project-content {
+  display: none;
+}
+
+.execution-content {
+  display: none;
+}
+
+#window-image{
+  width: 55%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.01);
+}
+
+#window-image img {
+  height: 100%;
+  width: 100%;
+}
