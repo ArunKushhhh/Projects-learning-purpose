@@ -397,8 +397,8 @@ nav {
 }
 
 #floating-window {
-  min-height: 100vh;
-  width: 95%;
+  height: max(100vh, 60%);
+  width: 95vw;
   background-color: #000;
   border-radius: 20px;
   display: flex;
@@ -435,7 +435,7 @@ nav {
 }
 
 #orange-head-bar {
-  height: 85px;
+  height: 6vw;
   width: 2px;
   background-color: #fe310a;
   position: absolute;
@@ -454,17 +454,25 @@ nav {
   color: white;
   cursor: pointer;
   display: inline-block;
+  transition: all 0.4s;
 }
 
 #heading h1:nth-child(2), #heading h1:nth-child(3){
   color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 #content{
   color: white;
   width: 370px;
   margin-top: 3vw;
+  width: 25vw;
+}
+
+#content p{
+  font-size: 1.5vw;
+  font-weight: 200;
 }
 
 .project-content {
@@ -480,10 +488,12 @@ nav {
   height: 100%;
   background-position: center;
   background-size: cover;
-  transform: scale(1.01);
 }
 
 #window-image img {
   height: 100%;
   width: 100%;
+  border-radius: 30px;
+  transform: scale(1.02);
+
 }
