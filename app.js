@@ -28,21 +28,35 @@ const designContent = document.querySelector(".design-content")
 const projectContent = document.querySelector(".project-content")
 const executionContent = document.querySelector(".execution-content")
 const bar = document.querySelector("#orange-head-bar")
+const windowImage = document.querySelector("#window-image img")
+let src = windowImage.getAttribute("src")
 
 design.addEventListener("click", () => {
+  design.style.color = "white"
+  project.style.color = "rgba(255, 255, 255, 0.3)"
+  execution.style.color = "rgba(255, 255, 255, 0.3)"
+  windowImage.setAttribute("src", "assets/images/design.png")
   bar.style.top = "0"
   designContent.style.display = "block"
   projectContent.style.display = "none"
   executionContent.style.display = "none"
 })
 project.addEventListener("click", () => {
-  bar.style.top = "85px"
+  project.style.color = "white"
+  design.style.color = "rgba(255, 255, 255, 0.3)"
+  execution.style.color = "rgba(255, 255, 255, 0.3)"
+  windowImage.setAttribute("src", "assets/images/projects.webp")
+  bar.style.top = "5vw"
   projectContent.style.display = "block"
   designContent.style.display = "none"
   executionContent.style.display = "none"
 })
 execution.addEventListener("click", () => {
-  bar.style.top = "160px"
+  execution.style.color = "white"
+  design.style.color = "rgba(255, 255, 255, 0.3)"
+  project.style.color = "rgba(255, 255, 255, 0.3)"
+  windowImage.setAttribute("src", "assets/images/execution.webp")
+  bar.style.top = "10vw"
   executionContent.style.display = "block"
   designContent.style.display = "none"
   projectContent.style.display = "none"
