@@ -19,6 +19,12 @@ body {
   width: 100%;
 }
 
+#main {
+  /* background: #000; */
+  position: relative;
+  z-index: 10;
+}
+
 #page1 {
   /* height: 100%; we do not use this as when we use %, it takes that much percent of it's parent as that property. Here, 100% of 0 (height of mmain div) is also 0, so insead use vh */
   min-height: 100vh;
@@ -166,7 +172,7 @@ nav {
   }
 }
 
-#page2{
+#page2 {
   min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
@@ -179,7 +185,7 @@ nav {
   overflow-x: auto;
 }
 
-#moving-text::-webkit-scrollbar{
+#moving-text::-webkit-scrollbar {
   display: none;
 }
 
@@ -189,7 +195,7 @@ nav {
   animation: move 10s linear infinite;
 }
 
-#moving-text .con h1{
+#moving-text .con h1 {
   font-size: 9vw;
   display: inline-block;
 }
@@ -204,10 +210,10 @@ nav {
 }
 
 @keyframes move {
-  from{
+  from {
     transform: translateX(0);
   }
-  to{
+  to {
     transform: translateX(-100%);
   }
 }
@@ -270,14 +276,14 @@ nav {
   }
 }
 
-#page3{
+#page3 {
   min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
   padding: 4vw 0;
 }
 
-#projects{
+#projects {
   margin-left: 2vw;
   margin-bottom: 2vw;
 }
@@ -291,16 +297,17 @@ nav {
   white-space: nowrap;
 }
 
-#projects h5{
+#projects h5 {
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   font-family: Neue Hass light;
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 1px;
+  margin-left: 6px;
 }
 
-.elem{
+.elem {
   height: 100px;
   width: 100%;
   position: relative;
@@ -329,7 +336,7 @@ nav {
   transition: all ease 0.2s;
 }
 
-.elem:hover .overlay{
+.elem:hover .overlay {
   top: 0;
 }
 
@@ -360,12 +367,12 @@ nav {
   overflow: hidden;
 }
 
-#btn h5{
+#btn h5 {
   z-index: 9;
   position: relative;
 }
 
-#btn::after{
+#btn::after {
   content: "";
   background: #000;
   height: 100%;
@@ -377,12 +384,12 @@ nav {
   transition: all ease 0.3s;
 }
 
-#btn:hover::after{
+#btn:hover::after {
   top: 0;
   border-radius: 0;
 }
 
-#btn:hover h5{
+#btn:hover h5 {
   filter: invert(1);
   transition: all 0.3s;
 }
@@ -393,7 +400,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5vw;
 }
 
 #floating-window {
@@ -407,7 +413,7 @@ nav {
   overflow: hidden;
 }
 
-#window-content{
+#window-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -422,7 +428,7 @@ nav {
   align-items: center;
 }
 
-#head-bar{
+#head-bar {
   position: relative;
 }
 
@@ -450,27 +456,28 @@ nav {
   line-height: 5vw;
 }
 
-#heading h1:first-child{
+#heading h1:first-child {
   color: white;
   cursor: pointer;
   display: inline-block;
   transition: all 0.4s;
 }
 
-#heading h1:nth-child(2), #heading h1:nth-child(3){
+#heading h1:nth-child(2),
+#heading h1:nth-child(3) {
   color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: all 0.4s;
 }
 
-#content{
+#content {
   color: white;
   width: 370px;
   margin-top: 3vw;
   width: 25vw;
 }
 
-#content p{
+#content p {
   font-size: 1.5vw;
   font-weight: 200;
 }
@@ -483,7 +490,7 @@ nav {
   display: none;
 }
 
-#window-image{
+#window-image {
   width: 55%;
   height: 100%;
   background-position: center;
@@ -495,5 +502,175 @@ nav {
   width: 100%;
   border-radius: 30px;
   transform: scale(1.02);
+}
 
+#page5 {
+  height: 95vh;
+  width: 100%;
+  background-color: #efeae3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8vw;
+}
+
+#page5 #projects{
+  margin-left: 0;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+}
+
+#page5 .scroll-container {
+  height: 60vh;
+  background: red;
+}
+
+#page6 {
+  height: 100vh;
+  width: 100%;
+}
+
+#footer {
+  position: fixed;
+  z-index: 9;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer-div {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gui-shape {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #fe310a, #fe5b0a);
+  filter: blur(30px);
+  position: relative;
+}
+
+.gui1 {
+  position: absolute;
+  left: -3vw;
+  height: 50vh;
+  width: 40vw;
+  background: linear-gradient(to bottom left, #fe310a, #fe5b0a);
+  border-bottom-right-radius: 100%;
+  filter: blur(50px);
+  animation: guiEffect1 3s ease-in alternate infinite;
+}
+
+.gui2 {
+  position: absolute;
+  right: -3vw;
+  height: 50vh;
+  width: 60vw;
+  background: linear-gradient(to bottom right, #fe310a, #fe5b0a);
+  filter: blur(50px);
+  border-bottom-left-radius: 100%;
+  animation: guiEffect2 4s ease-in alternate infinite;
+}
+
+.gui3 {
+  position: absolute;
+  left: 40vw;
+  height: 35vh;
+  width: 50vw;
+  background: linear-gradient(to bottom right, #fe310a, #fe5b0a);
+  filter: blur(50px);
+  border-radius: 50%;
+  animation: skewanime 4s linear alternate infinite;
+}
+
+@keyframes guiEffect1 {
+  from {
+    height: 50vh;
+    width: 40vw;
+  }
+  to {
+    height: 30vh;
+    width: 80vw;
+  }
+}
+
+@keyframes guiEffect2 {
+  from {
+    height: 50vh;
+    width: 60vw;
+  }
+  to {
+    height: 75vh;
+    width: 45vw;
+  }
+}
+
+@keyframes skewanime {
+  from {
+    transform: translateX(-10%) skew(0);
+  }
+  to {
+    transform: translateX(20%) skew(15deg);
+  }
+}
+
+#footer-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-bottom h1 {
+  font-size: 23vw;
+  justify-self: flex-end;
+}
+
+#footer-bottom .hr{
+  width: 95%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.links {
+  height: 10vh;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links h4{
+  font-weight: 100;
+  letter-spacing: 0.8px;
+}
+
+.links a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+}
+
+.links div{
+  letter-spacing: 0.8px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.links a:hover {
+  border-bottom: 1px solid white;
+  transition: all 0.3s;
 }
