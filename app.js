@@ -75,6 +75,42 @@ swiperAnimation();
 const crsr = document.querySelector(".crsr");
 
 window.addEventListener("mousemove", (e) => {
-  crsr.style.left = (e.x - 50) + "px";
-  crsr.style.top = (e.y - 50) + "px";
+  crsr.style.left = e.x - 50 + "px";
+  crsr.style.top = e.y - 50 + "px";
 });
+
+const menu = document.querySelector(".menu");
+const fullScr = document.getElementById("full-scr");
+
+menu.addEventListener("click", () => {
+  let navImg = document.querySelector("nav img");
+
+  fullScr.classList.toggle("active");
+  navImg.classList.toggle("nav-active");
+});
+
+const loader = document.getElementById("loader");
+setTimeout(() => {
+  loader.style.top = "-100%";
+}, 3000);
+
+const env = document.querySelector("#loader h1:first-child");
+setTimeout(() => {
+  env.style.display = "none";
+}, 1000);
+
+const exp = document.querySelector("#loader h1:nth-child(2)");
+setTimeout(() => {
+  exp.style.display = "block";
+}, 1000);
+setTimeout(() => {
+  exp.style.display = "none";
+}, 2000);
+
+const con = document.querySelector("#loader h1:nth-child(3)");
+setTimeout(() => {
+  con.style.display = "block";
+}, 2000);
+setTimeout(() => {
+  con.style.display = "none";
+}, 3000);
